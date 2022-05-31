@@ -2,7 +2,7 @@
 name: publish
 # Kdy se má akce spustit (při pushnutí nového commitu)
 on: [push]
-# Joby co má dělat
+# Joby co má dělat blablal
 jobs:
   publish:
     runs-on: ubuntu-latest
