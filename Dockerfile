@@ -23,6 +23,9 @@ RUN  echo 'sysadmin:password123' | chpasswd
 # Zviditelnění portu 22 do sítě
 # Exposing port 22 to the network
 EXPOSE 22
+# NGINX běží na portu 80
+# NGINX is running on port 80
+EXPOSE 80
 # Zapni ssh daemona - funkce CMD říká co se má stát po zapnutí kontejneru, RUN říká co se má stát v kompilačním procesu daného kontejneru
 # Start ssh daemon - CMD function says what should happen after starting the container, RUN says what should happen in the compilation process of said container
 CMD ["/usr/sbin/sshd","-D"]
