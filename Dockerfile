@@ -2,6 +2,9 @@
 # Use nginx mainline build as the Docker image base
 # https://hub.docker.com/_/nginx?tab=description
 FROM nginx:mainline
+# Nastavení labelu aby se image ukázal na tomto github repozitáři
+# Setting a label so the image is linked to this repository
+LABEL org.opencontainers.image.source="https://github.com/TrivariAlthea/DockerNGINXexample"
 # Aktualizuj Docker image
 # Update the Docker image
 RUN apt-get update && apt-get install -y
@@ -10,13 +13,13 @@ RUN apt-get update && apt-get install -y
 RUN apt-get install  openssh-server sudo -y
 # Přidání uživatele do sudo skupiny, vytvoření /home adresáře pro uživatele a nastavení shellu na /bin/bash
 # Adding user to the sudo group, creating /home directory for that user and setting shell to be /bin/bash
-RUN useradd -rm -d /home/${{secrets.SSH_USER}} -s /bin/bash -g root -G sudo -u 1000 ${{secrets.SSH_USER}}
+RUN useradd -rm -d /home/sysadmin -s /bin/bash -g root -G sudo -u 1000 sysadmin
 # Zapnutí ssh serveru
 # Starting ssh server
 RUN service ssh start
 # Nastavení hesla pro uživatele
 # Setting password for user
-RUN  echo '${{secrets.SSH_USER}}:${{secrets.SSH_PASSWORD}}' | chpasswd
+RUN  echo 'sysadmin:password123' | chpasswd
 # Zviditelnění portu 22 do sítě
 # Exposing port 22 to the network
 EXPOSE 22
