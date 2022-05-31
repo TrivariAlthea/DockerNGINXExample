@@ -16,9 +16,14 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GHCR_TOKEN}}
+        
+    - id: string
+      uses: ASzc/change-string-case-action@v2
+      with:
+        string: ${{ github.repository }}
 
     - name: Build the ${{ github.repository }} Docker image
       run: |
-        docker build . --tag ghcr.io/${{ github.repository }}:latest
-        docker run ghcr.io/${{ github.repository }}:latest
-        docker push ghcr.io/${{ github.repository }}:latest
+        docker build . --tag ghcr.io/${{ steps.string.outputs.lowercase }}:latest
+        docker run ghcr.io/${{ steps.string.outputs.lowercase }}:latest
+        docker push ghcr.io/${{ steps.string.outputs.lowercase }}:latest
