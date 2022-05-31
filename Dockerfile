@@ -29,6 +29,3 @@ EXPOSE 80
 # Zapni ssh daemona - funkce CMD říká co se má stát po zapnutí kontejneru, RUN říká co se má stát v kompilačním procesu daného kontejneru
 # Start ssh daemon - CMD function says what should happen after starting the container, RUN says what should happen in the compilation process of said container
 CMD ["/usr/sbin/sshd","-D"]
-# Zapni nginx na pozadí
-# Start nginx in the background
-CMD ["nginx", "-g", "daemon off"]
