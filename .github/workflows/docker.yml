@@ -1,9 +1,10 @@
+# Jméno dané akce na githubu
 name: publish
-
+# Kdy se má akce spustit (při pushnutí nového commitu)
 on: [push]
-
+# Joby co má dělat
 jobs:
-  publish-hello-world-image:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
