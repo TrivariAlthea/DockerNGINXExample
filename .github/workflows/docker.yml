@@ -25,5 +25,4 @@ jobs:
     - name: Build the ${{ github.repository }} Docker image
       run: |
         docker build . --tag ghcr.io/${{ steps.string.outputs.lowercase }}:latest
-        docker run ghcr.io/${{ steps.string.outputs.lowercase }}:latest
         docker push ghcr.io/${{ steps.string.outputs.lowercase }}:latest
