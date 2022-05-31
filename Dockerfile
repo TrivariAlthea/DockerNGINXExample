@@ -20,6 +20,9 @@ RUN service ssh start
 # Nastavení hesla pro uživatele
 # Setting password for user
 RUN  echo 'sysadmin:password123' | chpasswd
+# Zapni nginx na pozadí
+# Start nginx in the background
+ENTRYPOINT ['nginx', '-g', 'daemon off']
 # Zviditelnění portu 22 do sítě
 # Exposing port 22 to the network
 EXPOSE 22
