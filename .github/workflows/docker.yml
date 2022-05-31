@@ -1,5 +1,5 @@
 # Jméno dané akce na githubu
-name: publish
+name: Build And Upload Docker Image
 # Kdy se má akce spustit (při pushnutí nového commitu)
 on: [push]
 # Joby co má dělat blablal
