@@ -7,5 +7,5 @@ Switch to root `sudo -i`
 
 Start nginx using `nginx` command or any other way you preffer to.
 
-[![Docker Image Build](https://github.com/trivarialthea/DockerNGINXexample/actions/workflows/docker.yml/badge.svg?branch=main)](https://github.com/trivarialthea/DockerNGINXexample/actions/workflows/docker.yml)
+[![Build And Upload Docker Image](https://github.com/trivarialthea/DockerNGINXexample/actions/workflows/docker.yml/badge.svg?branch=main)](https://github.com/trivarialthea/DockerNGINXexample/actions/workflows/docker.yml)
 ![Docker Image Size](https://ghcr-badge.herokuapp.com/trivarialthea/dockernginxexample/size)
