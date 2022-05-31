@@ -1,5 +1,5 @@
 # DockerNGINXexample
-Example Dockerfile and [start](https://github.com/trivarialthea/DockerNGINXexample/blob/main/start.sh), [stop](https://github.com/trivarialthea/DockerNGINXexample/blob/main/stop.sh) and github [action](https://github.com/trivarialthea/DockerNGINXexample/blob/main/.github/workflows/docker.yml) scripts
+Example Dockerfile [start](https://github.com/trivarialthea/DockerNGINXexample/blob/main/start.sh), [stop](https://github.com/trivarialthea/DockerNGINXexample/blob/main/stop.sh) and github [action](https://github.com/trivarialthea/DockerNGINXexample/blob/main/.github/workflows/docker.yml) scripts
 
 SSH to the server using ``sysadmin``:``password123`` on port **22**
 
