@@ -4,7 +4,7 @@
 FROM nginx:mainline
 # Nastavení labelu aby se image ukázal na tomto github repozitáři
 # Setting a label so the image is linked to this repository
-LABEL org.opencontainers.image.source="https://github.com/jtihlarik/DockerNGINXexample"
+LABEL org.opencontainers.image.source="https://github.com/trivarialthea/DockerNGINXexample"
 # Aktualizuj Docker image
 # Update the Docker image
 RUN apt-get update && apt-get install -y
