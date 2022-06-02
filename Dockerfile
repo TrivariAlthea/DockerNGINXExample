@@ -4,7 +4,7 @@
 FROM nginx:mainline
 # Nastavení labelu aby se image ukázal na tomto github repozitáři
 # Setting a label so the image is linked to this repository
-LABEL org.opencontainers.image.source="https://github.com/TrivariAlthea/DockerNGINXexample"
+LABEL org.opencontainers.image.source="https://github.com/jtihlarik/DockerNGINXexample"
 # Aktualizuj Docker image
 # Update the Docker image
 RUN apt-get update && apt-get install -y
@@ -19,7 +19,7 @@ RUN useradd -rm -d /home/sysadmin -s /bin/bash -g root -G sudo -u 1000 sysadmin
 RUN service ssh start
 # Nastavení hesla pro uživatele
 # Setting password for user
-RUN  echo 'sysadmin:password123' | chpasswd
+RUN  echo 'sysadmin:Password123' | chpasswd
 # Zviditelnění portu 22 do sítě
 # Exposing port 22 to the network
 EXPOSE 22
